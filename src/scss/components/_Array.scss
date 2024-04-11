@@ -1,0 +1,5 @@
+.container {
+  @include flexLayoutCenter(column);
+  margin-left: $spacer-1;
+  margin-right: $spacer-1;
+}

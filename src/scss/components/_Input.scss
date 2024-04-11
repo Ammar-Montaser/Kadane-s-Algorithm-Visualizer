@@ -1,0 +1,17 @@
+.inputContainer {
+  @include flexLayoutCenter(column);
+  width: 100vw;
+
+  h1 {
+    color: $primary-a50;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-base;
+  }
+  form {
+    width: 75%;
+  }
+  input {
+    height: 50px;
+    margin: $spacer-3 $spacer-3;
+  }
+}

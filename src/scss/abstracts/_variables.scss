@@ -1,0 +1,154 @@
+/** SCSS PRIMARY COLORS */
+$primary-a0: #ffffff;
+$primary-a10: #c5c5c5;
+$primary-a20: #8d8d8d;
+$primary-a30: #5a5a5a;
+$primary-a50: #2b2b2b;
+$primary-a60: #222222;
+$primary-a70: #191919;
+$primary-a80: #0f0f0f;
+$primary-a90: #000000;
+
+/** SCSS SECONDARY COLORS */
+$secondary-a0: #ffffff;
+$secondary-a10: #daffd0;
+$secondary-a20: #b0ffa1;
+$secondary-a30: #7bff6e;
+$secondary-a50: #00ff2a;
+$secondary-a60: #22b927;
+$secondary-a70: #237721;
+$secondary-a80: #1a3c16;
+$secondary-a90: #000000;
+
+/** SCSS BREAKPOINTS COLORS */
+$breakpoints: (
+  x-small: 320px,
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  x-large: 1200px,
+);
+
+/** SCSS TYPOGRAPHY SIZES */
+
+$p-font-sizes: (
+  null: 14px,
+  320px: 15px,
+  480px: 16px,
+  768px: 17px,
+  1024px: 18px,
+  1200px: 19px,
+);
+
+$h1-font-sizes: (
+  null: 17px,
+  320px: 18px,
+  480px: 25px,
+  768px: 35px,
+  1024px: 40px,
+  1200px: 45px,
+);
+
+$h2-font-sizes: (
+  null: 16px,
+  320px: 17px,
+  480px: 18px,
+  768px: 19px,
+  1024px: 20px,
+  1200px: 21px,
+);
+
+$h3-font-sizes: (
+  null: 15px,
+  320px: 16px,
+  480px: 17px,
+  768px: 18px,
+  1024px: 19px,
+  1200px: 20px,
+);
+
+// Fonts
+/// Font Stacks
+$_sans-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  Helvetica, Arial, sans-serif !default;
+$_serif-font-stack: Georgia, "Times New Roman", Times, serif !default;
+$_mono-font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  monospace !default;
+$_symbol-font-stack: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+/// Font Families
+$font-family-base: $_sans-font-stack, $_symbol-font-stack !default;
+$font-family-alt: $_serif-font-stack, $_symbol-font-stack !default;
+$font-family-mono: $_mono-font-stack !default;
+
+// Font Weights
+$font-weight-bold: 600 !default;
+$font-weight-semibold: 500 !default;
+$font-weight-normal: 400 !default;
+$font-weight-light: 300 !default;
+
+// Font Sizes
+$font-size-x-large: 18px !default;
+$font-size-large: 16px !default;
+$font-size-normal: 14px !default;
+$font-size-small: 12px !default;
+$font-size-x-small: 11px !default;
+$font-size-h1: 32px !default;
+$font-size-h2: 24px !default;
+$font-size-h3: 20px !default;
+$font-size-h4: 16px !default;
+$font-size-h5: 14px !default;
+$font-size-h6: 12px !default;
+
+// Line Heights
+$line-height-size-x-large: 26px !default;
+$line-height-size-large: 24px !default;
+$line-height-size-normal: 22px !default;
+$line-height-size-small: 20px !default;
+$line-height-size-x-small: 18px !default;
+$line-height-size-h1: 40px !default;
+$line-height-size-h2: 32px !default;
+$line-height-size-h3: 28px !default;
+$line-height-size-h4: 24px !default;
+$line-height-size-h5: 22px !default;
+$line-height-size-h6: 20px !default;
+
+$line-height-normal: 1.5 !default;
+$line-height-condensed: 1.25 !default;
+$line-height-condensed-ultra: 1 !default;
+
+// Layout
+$spacer: 4px !default;
+$spacers: (
+  $spacer,
+  $spacer * 2,
+  $spacer * 3,
+  $spacer * 4,
+  $spacer * 5,
+  $spacer * 6,
+  $spacer * 7,
+  $spacer * 8,
+  $spacer * 9,
+  $spacer * 10
+) !default;
+// Aliases for easy use
+$spacer-0: 0 !default; // 0
+$spacer-1: nth($spacers, 1) !default; // 4px
+$spacer-2: nth($spacers, 2) !default; // 8px
+$spacer-3: nth($spacers, 3) !default; // 12px
+$spacer-4: nth($spacers, 4) !default; // 16px
+$spacer-5: nth($spacers, 5) !default; // 20px
+$spacer-6: nth($spacers, 6) !default; // 24px
+$spacer-7: nth($spacers, 7) !default; // 28px
+$spacer-8: nth($spacers, 8) !default; // 32px
+$spacer-9: nth($spacers, 9) !default; // 36px
+$spacer-10: nth($spacers, 10) !default; // 40px
+
+// Animation
+$speed-fast: 0.15s !default;
+$speed-normal: 0.3s !default;
+$speed-slow: 0.5s !default;
+$timing-fn: linear !default;
+//$ease-in-fn: ease-in !default;
+//$ease-out-fn: ease-in !default;
+$easing: $timing-fn !default;

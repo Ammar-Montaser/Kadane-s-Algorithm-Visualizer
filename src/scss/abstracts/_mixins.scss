@@ -1,0 +1,28 @@
+/** RESPONSIVE TYPOGRAPHY MIXINS */
+
+@mixin font-size($fsMap, $breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fsMap {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+/** BREAKPOINTS MIXINS */
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    $size: map-get($breakpoints, $point);
+    @media (max-width: #{$size}) {
+      @content;
+    }
+  }
+}
