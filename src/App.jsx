@@ -65,7 +65,11 @@ function App() {
         <div className="main">
           <div className="input">
             <Input />
-            <button onClick={maxSequence}> start</button>
+            <div className="Control Buttons">
+              {" "}
+              <button onClick={maxSequence}> start</button>
+              <button onClick={maxSequence}> start</button>
+            </div>
           </div>
           <div className="arrayContainer" ref={myRef}>
             {arr.map((item, i) => (
