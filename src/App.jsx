@@ -4,7 +4,7 @@ import ArrayCard from "./views/ArrayCard";
 import Input from "./views/Input";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
-import { setMax, setSum } from "./Redux/arraySlice.js";
+import { setMax, setSum, reset } from "./Redux/arraySlice.js";
 
 function App() {
   const arr = useSelector((state) => state.arrayReducer.array);
@@ -65,10 +65,10 @@ function App() {
         <div className="main">
           <div className="input">
             <Input />
-            <div className="Control Buttons">
+            <div className="controlButtons">
               {" "}
-              <button onClick={maxSequence}> start</button>
-              <button onClick={maxSequence}> start</button>
+              <button onClick={maxSequence}> Start</button>
+              <button onClick={dispatch(reset)}> Reset</button>
             </div>
           </div>
           <div className="arrayContainer" ref={myRef}>

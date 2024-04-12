@@ -35,9 +35,20 @@
   }
   .arrayContainer {
     margin: $spacer-3 $spacer-3;
-
     @include flexLayoutCenter(row);
     flex-wrap: wrap;
+  }
+  .controlButtons {
+    @include flexLayoutCenter(row);
+    button {
+      margin-top: $spacer-3;
+      margin-left: $spacer-3;
+      margin-right: $spacer-3;
+      padding: $spacer-2 $spacer-8;
+      border-radius: 0.5rem;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-mono;
+    }
   }
 }
 

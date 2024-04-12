@@ -534,6 +534,21 @@ input[type=number] {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.main .controlButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.main .controlButtons button {
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 8px 32px;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
 
 .footer {
   display: flex;
