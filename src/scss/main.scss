@@ -30,8 +30,11 @@
   // min-height: 100%;
   .input {
     @include flexLayoutCenter(column);
+    @include breakpoint(large) {
+      width: 90vw;
+    }
     min-width: 70vw;
-    height: 200px;
+    height: 250px;
   }
   .arrayContainer {
     margin: $spacer-3 $spacer-3;
@@ -49,6 +52,12 @@
       font-weight: $font-weight-bold;
       font-family: $font-family-mono;
     }
+    .start {
+      background-color: $secondary-a30;
+    }
+    .reset {
+      background-color: rgb(238, 74, 74);
+    }
   }
 }
 
@@ -57,15 +66,9 @@
   margin-top: auto;
   justify-content: space-around;
   background-color: $primary-a50;
-  // width: 100vw;
   height: 70px;
   position: relative;
   border-start-start-radius: 1rem;
   border-start-end-radius: 1rem;
   box-shadow: 0px -10px 15px -3px rgba(0, 0, 0, 0.1);
-  .footerText {
-    color: $secondary-a50;
-    font-weight: $font-weight-light;
-    font-family: $font-family-base;
-  }
 }

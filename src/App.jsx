@@ -8,8 +8,6 @@ import { setMax, setSum, reset } from "./Redux/arraySlice.js";
 
 function App() {
   const arr = useSelector((state) => state.arrayReducer.array);
-  const maxNum = useSelector((state) => state.arrayReducer.max);
-  const sum = useSelector((state) => state.arrayReducer.sum);
 
   const myRef = useRef(null);
   const dispatch = useDispatch();
@@ -34,8 +32,8 @@ function App() {
       sum = sum + arr[i];
       dispatch(setSum(sum));
 
-      document.getElementById(i).style.color = "white";
-      document.getElementById(i).style.border = "2px solid black";
+      document.getElementById(i).style.color = "red";
+      document.getElementById(i).style.border = "5px solid red";
       if (sum > max) {
         end = i;
         max = sum;
@@ -52,8 +50,8 @@ function App() {
       console.log(end);
     }
     for (let i = start; i <= end; i++) {
-      document.getElementById(i).style.color = "cyan";
-      document.getElementById(i).style.border = "2px solid cyan";
+      document.getElementById(i).style.color = "limegreen";
+      document.getElementById(i).style.border = "5px solid limegreen";
     }
   };
 
@@ -69,8 +67,14 @@ function App() {
             <Input />
             <div className="controlButtons">
               {" "}
-              <button onClick={maxSequence}> Start</button>
-              <button onClick={resetState}> Reset</button>
+              <button className="start" onClick={maxSequence}>
+                {" "}
+                Start
+              </button>
+              <button className="reset" onClick={resetState}>
+                {" "}
+                Reset
+              </button>
             </div>
           </div>
           <div className="arrayContainer" ref={myRef}>
@@ -81,8 +85,8 @@ function App() {
         </div>
 
         <div className="footer">
-          <h1 className="footerText">{"Global Maximum: " + maxNum}</h1>
-          <h1 className="footerText">{"Current Sum: " + sum}</h1>
+          <h2 className="footerText">{"Global Maximum: "}</h2>
+          <h2 className="footerText">{"Current Sum: "}</h2>
         </div>
       </div>
     </>

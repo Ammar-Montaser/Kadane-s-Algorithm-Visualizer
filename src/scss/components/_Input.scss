@@ -35,6 +35,16 @@
     background-color: $secondary-a10;
     margin: $spacer-1 $spacer-1;
   }
+  .resultInputContainer {
+    @include flexLayoutCenter(row);
+    width: 100%;
+    justify-content: space-around;
+  }
+  .resultText {
+    color: $secondary-a50;
+    font-weight: $font-weight-normal;
+    font-family: $font-family-base;
+  }
 }
 
 input::-webkit-outer-spin-button,

@@ -483,6 +483,19 @@ body {
   background-color: #daffd0;
   margin: 4px 4px;
 }
+.inputContainer .resultInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.inputContainer .resultText {
+  color: #00ff2a;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -524,7 +537,12 @@ input[type=number] {
   justify-content: center;
   flex-direction: column;
   min-width: 70vw;
-  height: 200px;
+  height: 250px;
+}
+@media (max-width: 1024px) {
+  .main .input {
+    width: 90vw;
+  }
 }
 .main .arrayContainer {
   margin: 12px 12px;
@@ -549,6 +567,12 @@ input[type=number] {
   font-weight: 600;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+.main .controlButtons .start {
+  background-color: #7bff6e;
+}
+.main .controlButtons .reset {
+  background-color: rgb(238, 74, 74);
+}
 
 .footer {
   display: flex;
@@ -563,9 +587,4 @@ input[type=number] {
   border-start-start-radius: 1rem;
   border-start-end-radius: 1rem;
   box-shadow: 0px -10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-.footer .footerText {
-  color: #00ff2a;
-  font-weight: 300;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }/*# sourceMappingURL=main.css.map */
