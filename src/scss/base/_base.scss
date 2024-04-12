@@ -126,3 +126,7 @@ q:before {
 :root {
   background-color: #daffd0;
 }
+body {
+  overflow-x: hidden;
+  flex-direction: column;
+}
