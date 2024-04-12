@@ -13,7 +13,9 @@ function App() {
 
   const myRef = useRef(null);
   const dispatch = useDispatch();
-
+  const resetState = () => {
+    dispatch(reset());
+  };
   const maxSequence = async () => {
     let max = Number.NEGATIVE_INFINITY;
     let sum = 0;
@@ -68,7 +70,7 @@ function App() {
             <div className="controlButtons">
               {" "}
               <button onClick={maxSequence}> Start</button>
-              <button onClick={dispatch(reset)}> Reset</button>
+              <button onClick={resetState}> Reset</button>
             </div>
           </div>
           <div className="arrayContainer" ref={myRef}>

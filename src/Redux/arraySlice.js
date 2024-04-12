@@ -2,8 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   array: [],
-  first: -999,
-  last: -999,
   max: Number.NEGATIVE_INFINITY,
   loading: false,
   sum: 0,
@@ -15,7 +13,9 @@ export const arraySlice = createSlice({
   reducers: {
     reset: (state) => {
       state.max = Number.NEGATIVE_INFINITY;
-      state.answer = [];
+      state.array = [];
+      state.loading = false;
+      state.sum = 0;
     },
     toogle: (state) => {
       state.loading += !state.loading;
@@ -41,13 +41,7 @@ export const arraySlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const {
-  addItemToArray,
-  toogle,
-  setMax,
-  reset,
-
-  setSum,
-} = arraySlice.actions;
+export const { addItemToArray, toogle, setMax, reset, setSum } =
+  arraySlice.actions;
 
 export default arraySlice.reducer;
