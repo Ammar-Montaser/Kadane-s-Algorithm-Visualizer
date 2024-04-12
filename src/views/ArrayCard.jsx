@@ -2,7 +2,7 @@
 function ArrayCard(props) {
   return (
     <div className="arrayCard" id={props.idx}>
-      <p>{props.num}</p>
+      <h1>{props.num}</h1>
     </div>
   );
 }

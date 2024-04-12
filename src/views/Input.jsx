@@ -4,7 +4,7 @@ import { addItemToArray } from "../Redux/arraySlice";
 function Input() {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const regex = /^\d$/;
+  const regex = /^\d+$/;
   const onChange = (e) => {
     setValue(e.target.value);
   };
@@ -20,7 +20,7 @@ function Input() {
   };
   return (
     <div className="inputContainer">
-      <h1>Add Items to the array</h1>
+      <h2>ADD ITEMS TO THE SUB ARRAY</h2>
       <form>
         <input name="array" value={value} onChange={onChange} type="number" />
         <button onClick={onSubmit}>Add</button>

@@ -61,11 +61,12 @@ function App() {
         <div className="nav">
           <h1 className="title">KADANE&apos;S ALGORITHM VISUALIZER</h1>
         </div>
-        <div className="input">
-          <Input />
-          <button onClick={maxSequence}> start</button>
-        </div>
+
         <div className="main">
+          <div className="input">
+            <Input />
+            <button onClick={maxSequence}> start</button>
+          </div>
           <div className="arrayContainer" ref={myRef}>
             {arr.map((item, i) => (
               <ArrayCard idx={i} key={i} num={item}></ArrayCard>

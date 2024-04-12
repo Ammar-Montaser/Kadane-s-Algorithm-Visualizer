@@ -1,9 +1,18 @@
 .arrayCard {
   background-color: black;
-  width: 100px;
-  height: 100px;
+  width: fit-content;
+  height: fit-content;
+  min-height: 100px;
+  min-width: 100px;
   color: white;
   margin: $spacer-1 $spacer-1;
+  @include flexLayoutCenter(column);
+  border: 5px solid $secondary-a60;
+  border-radius: 0.5rem;
+  h1 {
+    font-weight: $font-weight-bold;
+    font-family: $font-family-mono;
+  }
 }
 
 .shake-horizontal {
