@@ -557,6 +557,7 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 0;
 }
 .main .input {
   display: flex;
@@ -568,8 +569,25 @@ input[type=number] {
 }
 @media (max-width: 1024px) {
   .main .input {
-    width: 90vw;
+    width: 100vw;
   }
+}
+.main .descContainer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+.main .descContainer h1 {
+  font-weight: 600;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.main .descContainer p {
+  text-align: center;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .main .arrayContainer {
   margin: 12px 12px;
@@ -587,9 +605,9 @@ input[type=number] {
 }
 .main .controlButtons button {
   margin-top: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
-  padding: 8px 32px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 8px 24px;
   border-radius: 0.5rem;
   font-weight: 600;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;

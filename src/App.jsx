@@ -126,16 +126,38 @@ function App() {
                 Reset
               </button>
               <button className="random" disabled={loading} onClick={random}>
-                {" "}
-                Add Random 10
+                Random
               </button>
             </div>
           </div>
-          <div className="arrayContainer" ref={myRef}>
-            {arr.map((item, i) => (
-              <ArrayCard idx={i} key={i} num={item}></ArrayCard>
-            ))}
-          </div>
+          {arr.length == 0 ? (
+            <div className="descContainer">
+              <h1>Algorithm Explaination</h1>
+              <p>
+                Kadane&apos;s algorithm efficiently solves the maximum subarray
+                problem, finding the contiguous subarray with the largest sum
+                within a one-dimensional array of numbers. It does this in
+                linear time with a single pass through the array. The key
+                insight is that we can build up the maximum sum subarray ending
+                at each index i, either by continuing the previous maximum sum
+                subarray or starting a new one. At each step, we compare
+                extending the current subarray versus starting a new one. By
+                keeping track of the current maximum sum and global maximum sum
+                seen so far, we can continually update what subarray has the
+                biggest total without needing to test all subsets. Elegant in
+                its simplicity, Kadane&apos;s algorithm partitions the problem
+                space intelligently to solve this optimization challenge in
+                optimal linear complexity.
+              </p>{" "}
+              <h1>Try It Yourself</h1>
+            </div>
+          ) : (
+            <div className="arrayContainer" ref={myRef}>
+              {arr.map((item, i) => (
+                <ArrayCard idx={i} key={i} num={item}></ArrayCard>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="footer">

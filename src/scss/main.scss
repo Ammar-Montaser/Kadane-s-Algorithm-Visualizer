@@ -24,17 +24,28 @@
 
 .main {
   @include flexLayoutCenter(column);
-  // margin-left: auto;
-  // margin-right: auto;
-  // width: 100vw;
-  // min-height: 100%;
+  margin-top: 0;
   .input {
     @include flexLayoutCenter(column);
     @include breakpoint(large) {
-      width: 90vw;
+      width: 100vw;
     }
     min-width: 70vw;
     height: 250px;
+  }
+  .descContainer {
+    margin-top: 50px;
+    @include flexLayoutCenter(column);
+    width: 80%;
+    h1 {
+      font-weight: $font-weight-bold;
+      font-family: $font-family-mono;
+    }
+    p {
+      text-align: center;
+      font-weight: $font-weight-normal;
+      font-family: $font-family-base;
+    }
   }
   .arrayContainer {
     margin: $spacer-3 $spacer-3;
@@ -45,9 +56,9 @@
     @include flexLayoutCenter(row);
     button {
       margin-top: $spacer-3;
-      margin-left: $spacer-3;
-      margin-right: $spacer-3;
-      padding: $spacer-2 $spacer-8;
+      margin-left: $spacer-2;
+      margin-right: $spacer-2;
+      padding: $spacer-2 $spacer-6;
       border-radius: 0.5rem;
       font-weight: $font-weight-bold;
       font-family: $font-family-mono;
