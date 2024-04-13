@@ -34,6 +34,15 @@ function Input() {
 
         <h2 className="resultText">{"Current Sum: " + sum}</h2>
       </div>
+      <div className="colorKey">
+        {" "}
+        <span className="green"></span>
+        <p>Maximum SubArray Solution</p>
+        <span className="cyan"></span>
+        <p>Scanning Array</p>
+        <span className="yellow"></span>
+        <p>Added To Array</p>
+      </div>
     </div>
   );
 }

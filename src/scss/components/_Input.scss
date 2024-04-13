@@ -39,11 +39,38 @@
     @include flexLayoutCenter(row);
     width: 100%;
     justify-content: space-around;
+    .resultText {
+      font-weight: $font-weight-normal;
+      font-family: $font-family-base;
+    }
   }
-  .resultText {
-    color: $secondary-a50;
-    font-weight: $font-weight-normal;
-    font-family: $font-family-base;
+
+  .colorKey {
+    margin-top: 5px;
+    width: 100%;
+    @include flexLayoutCenter(row);
+
+    justify-content: center;
+    span {
+      width: 15px;
+      height: 15px;
+      border: 2px solid white;
+    }
+    p {
+      color: $secondary-a20;
+      margin-left: $spacer-2;
+
+      margin-right: $spacer-6;
+    }
+    .green {
+      background-color: lime;
+    }
+    .cyan {
+      background-color: cyan;
+    }
+    .yellow {
+      background-color: yellow;
+    }
   }
 }
 

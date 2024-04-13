@@ -5,6 +5,8 @@ const initialState = {
   max: Number.NEGATIVE_INFINITY,
   loading: false,
   sum: 0,
+  start: 0,
+  end: 0,
 };
 
 export const arraySlice = createSlice({
@@ -16,9 +18,11 @@ export const arraySlice = createSlice({
       state.array = [];
       state.loading = false;
       state.sum = 0;
+      state.start = 0;
+      state.end = 0;
     },
-    toogle: (state) => {
-      state.loading += !state.loading;
+    toogle: (state, action) => {
+      state.loading = action.payload;
     },
 
     addItemToArray: (state, action) => {
@@ -31,17 +35,24 @@ export const arraySlice = createSlice({
     setSum: (state, action) => {
       state.sum = action.payload;
     },
-    setFirst: (state, action) => {
-      state.first = action.payload;
+    setStart: (state, action) => {
+      state.start = action.payload;
     },
-    setLast: (state, action) => {
-      state.last = action.payload;
+    setEnd: (state, action) => {
+      state.end = action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addItemToArray, toogle, setMax, reset, setSum } =
-  arraySlice.actions;
+export const {
+  addItemToArray,
+  toogle,
+  setMax,
+  reset,
+  setSum,
+  setEnd,
+  setStart,
+} = arraySlice.actions;
 
 export default arraySlice.reducer;

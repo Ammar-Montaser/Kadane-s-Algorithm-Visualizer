@@ -372,7 +372,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 5px solid #22b927;
+  border: 5px solid yellow;
   border-radius: 0.5rem;
 }
 .arrayCard h1 {
@@ -491,10 +491,37 @@ body {
   width: 100%;
   justify-content: space-around;
 }
-.inputContainer .resultText {
-  color: #00ff2a;
+.inputContainer .resultInputContainer .resultText {
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.inputContainer .colorKey {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.inputContainer .colorKey span {
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+}
+.inputContainer .colorKey p {
+  color: #b0ffa1;
+  margin-left: 8px;
+  margin-right: 24px;
+}
+.inputContainer .colorKey .green {
+  background-color: lime;
+}
+.inputContainer .colorKey .cyan {
+  background-color: cyan;
+}
+.inputContainer .colorKey .yellow {
+  background-color: yellow;
 }
 
 input::-webkit-outer-spin-button,
@@ -572,6 +599,9 @@ input[type=number] {
 }
 .main .controlButtons .reset {
   background-color: rgb(238, 74, 74);
+}
+.main .controlButtons .random {
+  background-color: rgb(0, 186, 149);
 }
 
 .footer {

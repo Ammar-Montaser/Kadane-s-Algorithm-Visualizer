@@ -7,7 +7,7 @@
   color: white;
   margin: $spacer-1 $spacer-1;
   @include flexLayoutCenter(column);
-  border: 5px solid $secondary-a60;
+  border: 5px solid yellow;
   border-radius: 0.5rem;
   h1 {
     font-weight: $font-weight-bold;
