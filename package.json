@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/Ammar-Montaser/Kadane-s-Algorithm-Visualizer/",
   "name": "kadanevisualizer",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
