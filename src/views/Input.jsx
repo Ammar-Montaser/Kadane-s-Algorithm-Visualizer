@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 function Input() {
   const maxNum = useSelector((state) => state.arrayReducer.max);
   const sum = useSelector((state) => state.arrayReducer.sum);
+  const loading = useSelector((state) => state.arrayReducer.loading);
+
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
   const regex = /^-?\d+$/;
@@ -21,13 +23,16 @@ function Input() {
         "Please enter a valid number! only negative and positive numbers allowed."
       );
     }
+    setValue("");
   };
   return (
     <div className="inputContainer">
       <h2>ADD NUMBERS TO THE ARRAY!</h2>{" "}
       <form>
         <input name="array" value={value} onChange={onChange} type="number" />
-        <button onClick={onSubmit}>Add</button>
+        <button onClick={onSubmit} disabled={loading}>
+          Add
+        </button>
       </form>{" "}
       <div className="resultInputContainer">
         <h2 className="resultText">{"Global Maximum: " + maxNum}</h2>

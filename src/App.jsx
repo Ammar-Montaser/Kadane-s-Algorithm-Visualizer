@@ -22,15 +22,26 @@ function App() {
   const resetState = () => {
     dispatch(reset());
   };
-  const random = () => {
+  const random = async () => {
+    dispatch(toogle(true));
+
     for (let i = 0; i <= 10; i++) {
       let sign = Math.round(Math.random());
       let randomNum = Math.round(Math.random() * 100);
       sign === 0 ? (randomNum *= -1) : (randomNum *= 1);
-      setTimeout(() => {
-        dispatch(addItemToArray(randomNum));
-      }, 1000 * i);
+      await new Promise((resolve) =>
+        setTimeout(() => {
+          dispatch(addItemToArray(randomNum));
+
+          resolve();
+        }, 1000)
+      );
+
+      // setTimeout(() => {
+      //   dispatch(addItemToArray(randomNum));
+      // }, 1000 * i);
     }
+    dispatch(toogle(false));
   };
 
   const maxSequence = async () => {
@@ -100,7 +111,7 @@ function App() {
               {" "}
               <button
                 className="start"
-                disabled={arr.length == 0 ? true : false || loading}
+                disabled={arr.length == 0 || loading}
                 onClick={maxSequence}
               >
                 {" "}
@@ -108,7 +119,7 @@ function App() {
               </button>
               <button
                 className="reset"
-                disabled={arr.length == 0 ? true : false || loading}
+                disabled={arr.length == 0 || loading}
                 onClick={resetState}
               >
                 {" "}
@@ -116,7 +127,7 @@ function App() {
               </button>
               <button className="random" disabled={loading} onClick={random}>
                 {" "}
-                Random
+                Add Random 10
               </button>
             </div>
           </div>
@@ -131,7 +142,7 @@ function App() {
           <h2 className="footerText">
             &copy; {new Date().getFullYear()} Ammar Montaser
           </h2>
-          <h2 className="footerText link">
+          <h2 className="link">
             <a href="ammarmontaser.com">Visit My Website</a>
           </h2>
         </div>
