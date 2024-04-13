@@ -165,7 +165,7 @@ function App() {
             &copy; {new Date().getFullYear()} Ammar Montaser
           </h2>
           <h2 className="link">
-            <a href="ammarmontaser.com">Visit My Website</a>
+            <a href="https://ammarmontaser.com">Visit My Website</a>
           </h2>
         </div>
       </div>
